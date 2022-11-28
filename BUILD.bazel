@@ -1,0 +1,10 @@
+
+
+
+genrule(
+    name = "demo",
+    srcs = [],
+    outs = ["file.txt"],
+    cmd = "./$(location echo.sh) 'test' > \"$@\"",
+    tools = ["echo.sh"],
+)
